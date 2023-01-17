@@ -1,5 +1,7 @@
 "use strict";
 
+import axios from "axios";
+
 const NUMS_API_BASE_URL = "http://localhost:5000/api";
 
 /**
