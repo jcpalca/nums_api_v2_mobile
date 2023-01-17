@@ -1,8 +1,8 @@
-import React from 'react'
-import { View } from "react-native"
-import Carousel, { Pagination } from 'react-native-snap-carousel'
-import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from './ExampleCard'
-import data from './data'
+import React from 'react';
+import { View } from "react-native";
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from './ExampleCard';
+import data from './data';
 
 function ExampleCarousel() {
   const [index, setIndex] = React.useState(0);
