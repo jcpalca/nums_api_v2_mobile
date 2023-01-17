@@ -1,12 +1,35 @@
-import React from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { View } from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from './ExampleCard';
+import { getFact } from './utils';
 import data from './data';
 
 function ExampleCarousel() {
-  const [index, setIndex] = React.useState(0);
-  const isCarousel = React.useRef(null);
+  const [index, setIndex] = useState(0);
+  const [data, setData] = useState([]);
+  const isCarousel = useRef(null);
+  const date = new Date();
+  const month = date.getMonth() + 1; // Month is (0-11) so add 1 to (1-12)
+  const day = date.getDate();
+
+  useEffect(function fetchFact() {
+    try {
+      async function fetchFactAPI() {
+        const triviaFactInfo = await getFact("42", "trivia");
+        const mathFactInfo = await getFact("5", "math");
+        const yearFactInfo = await getFact("2000", "years");
+        const dateFactInfo = await getFact("6/15", "dates");
+        console.log(dateFactInfo)
+        setData([triviaFactInfo, mathFactInfo, yearFactInfo, dateFactInfo]);
+      }
+
+      fetchFactAPI();
+    }
+    catch(err){
+      console.log(err)
+    }
+  }, []);
 
   return (
     <View>
