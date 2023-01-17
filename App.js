@@ -1,12 +1,11 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import ExampleCarousel from "./ExampleCarousel";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <ExampleCarousel />
-    </SafeAreaView>
+    </ScrollView>
   );
 }
 
