@@ -1,17 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import ExampleCard from "./ExampleCard";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import ExampleCarousel from "./ExampleCarousel";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>YEAHHHHHH BOIIIIIIIII</Text>
-      <StatusBar style="auto" />
-      <ExampleCard />
-      <ExampleCard />
-      <ExampleCard />
-      <ExampleCard />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ExampleCarousel />
+    </SafeAreaView>
   );
 }
 
