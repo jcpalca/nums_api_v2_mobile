@@ -8,7 +8,10 @@ function ExampleCard({ item, index }) {
   return (
     <View style={styles.container} key={index}>
       <Text style={styles.header}>{item.type}</Text>
-      <Text style={styles.body}>numbersapi.com/{item.number}/{item.type}</Text>
+      {item.number
+        ? <Text style={styles.body}>numbersapi.com/{item.number}/{item.type}</Text>
+        : <Text style={styles.body}>numbersapi.com/{item.month}/{item.day}/{item.type}</Text>
+      }
       <Text style={styles.body}>{item.message}</Text>
     </View>
   );
