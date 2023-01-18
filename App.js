@@ -1,5 +1,6 @@
 import { StyleSheet, ScrollView } from "react-native";
 import ExampleCarousel from "./ExampleCarousel";
+import InteractiveTable from "./InteractiveTable";
 
 /** App: Top level component rendering ExampleCarousel
  *
@@ -16,13 +17,14 @@ export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ExampleCarousel />
+      <InteractiveTable />
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0.65,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
