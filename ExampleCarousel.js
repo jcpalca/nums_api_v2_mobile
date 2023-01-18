@@ -3,7 +3,6 @@ import { View, StyleSheet } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from "./ExampleCard";
 import { getFact } from "./utils";
-import data from "./data";
 
 /** ExampleCarousel: Renders a carousel displaying ExampleCard components
  *
@@ -86,7 +85,11 @@ function ExampleCarousel() {
 
 const styles = StyleSheet.create({
   carousel: {
-    paddingTop: 50
+    paddingTop: 50,
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
