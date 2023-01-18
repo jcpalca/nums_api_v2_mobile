@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { getFact } from "./utils";
 import InteractiveCard from "./InteractiveCard";
 
@@ -54,10 +54,19 @@ function InteractiveTable() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <InteractiveCard fact={fact} searchNum={searchNum}/>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 50,
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+  },
+});
 
 export default InteractiveTable;
