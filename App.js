@@ -1,6 +1,15 @@
 import { StyleSheet, ScrollView } from "react-native";
 import ExampleCarousel from "./ExampleCarousel";
 
+/** App: Top level component rendering ExampleCarousel
+ *
+ *  Props: none
+ *
+ *  State: none
+ *
+ *  App -> ExampleCarousel
+ */
+
 export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
