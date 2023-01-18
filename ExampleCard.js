@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Dimensions, Pressable } from "react-native";
+import { getFact } from './utils';
 
 export const SLIDER_WIDTH = Dimensions.get('window').width + 80;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
@@ -26,12 +27,15 @@ function ExampleCard({ item, index }) {
 
   return (
     <View style={styles.container} key={index}>
-      <Text style={styles.header}>{item.type}</Text>
+      <Text style={styles.header}>{item.type.toUpperCase()}</Text>
       {item.number
         ? <Text style={styles.body}>numbersapi.com/{item.number}/{item.type}</Text>
         : <Text style={styles.body}>numbersapi.com/{item.month}/{item.day}/{item.type}</Text>
       }
       <Text style={styles.body}>{item.message}</Text>
+      <Pressable style={styles.button}>
+        <Text style={styles.text}>Random Fact</Text>
+      </Pressable>
     </View>
   );
 }
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     width: ITEM_WIDTH,
-    height: 300,
+    height: 350,
     paddingBottom: 40,
     shadowColor: "#000",
     shadowOffset: {
@@ -65,6 +69,17 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingTop: 20,
     paddingRight: 20
+  },
+  button: {
+    marginTop: 50,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: "#000",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    color: "white"
   }
 });
 
