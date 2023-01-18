@@ -21,6 +21,9 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
  */
 
 function ExampleCard({ item, index }) {
+  console.debug("ExampleCard");
+  console.log(item, index);
+
   return (
     <View style={styles.container} key={index}>
       <Text style={styles.header}>{item.type}</Text>

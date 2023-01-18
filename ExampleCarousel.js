@@ -21,9 +21,13 @@ import data from './data';
  */
 
 function ExampleCarousel() {
+  console.debug("ExampleCarousel");
+
   const [index, setIndex] = useState(0);
   const [data, setData] = useState([]);
   const isCarousel = useRef(null);
+
+  console.log(index, data);
 
   // Use when we are able to figure out how to display the url if current date
   // doesn't exist in db

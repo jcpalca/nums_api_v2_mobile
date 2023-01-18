@@ -11,6 +11,8 @@ import ExampleCarousel from "./ExampleCarousel";
  */
 
 export default function App() {
+  console.debug("App");
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ExampleCarousel />
