@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from "./ExampleCard";
 import { getFact } from "./utils";
@@ -53,7 +53,7 @@ function ExampleCarousel() {
   }, []);
 
   return (
-    <View>
+    <View style={styles.carousel}>
       <Carousel
         layout="tinder"
         layoutCardOffset={9}
@@ -83,5 +83,12 @@ function ExampleCarousel() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  carousel: {
+    paddingTop: 50
+  },
+});
+
 
 export default ExampleCarousel;
