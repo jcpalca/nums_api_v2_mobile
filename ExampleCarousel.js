@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 import { View } from "react-native";
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from './ExampleCard';
-import { getFact } from './utils';
-import data from './data';
+import Carousel, { Pagination } from "react-native-snap-carousel";
+import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from "./ExampleCard";
+import { getFact } from "./utils";
+import data from "./data";
 
 /** ExampleCarousel: Renders a carousel displaying ExampleCard components
  *
@@ -47,9 +47,8 @@ function ExampleCarousel() {
       }
 
       fetchFactAPI();
-    }
-    catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
   }, []);
 
@@ -75,7 +74,7 @@ function ExampleCarousel() {
           height: 10,
           borderRadius: 5,
           marginHorizontal: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.92)'
+          backgroundColor: "rgba(0, 0, 0, 0.92)",
         }}
         inactiveDotOpacity={0.4}
         inactiveDotScale={0.6}
@@ -84,6 +83,5 @@ function ExampleCarousel() {
     </View>
   );
 }
-
 
 export default ExampleCarousel;
