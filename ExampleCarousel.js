@@ -5,13 +5,31 @@ import ExampleCard, { SLIDER_WIDTH, ITEM_WIDTH } from './ExampleCard';
 import { getFact } from './utils';
 import data from './data';
 
+/** ExampleCarousel: Renders a carousel displaying ExampleCard components
+ *
+ *  Props: None
+ *
+ *  State: index: index of cards in carousel
+ *         data: array of objects like:
+ *              [{
+ *                 "number": "145"
+ *                 "message": "145 is the atomic number of Unquadpentium."
+ *                 "type": "math"
+ *              }, {...}, ...]
+ *
+ *  App -> ExampleCarousel -> ExampleCard
+ */
+
 function ExampleCarousel() {
   const [index, setIndex] = useState(0);
   const [data, setData] = useState([]);
   const isCarousel = useRef(null);
-  const date = new Date();
-  const month = date.getMonth() + 1; // Month is (0-11) so add 1 to (1-12)
-  const day = date.getDate();
+
+  // Use when we are able to figure out how to display the url if current date
+  // doesn't exist in db
+  // const date = new Date();
+  // const month = date.getMonth() + 1; // Month is (0-11) so add 1 to (1-12)
+  // const day = date.getDate();
 
   useEffect(function fetchFact() {
     try {
@@ -20,7 +38,7 @@ function ExampleCarousel() {
         const mathFactInfo = await getFact("5", "math");
         const yearFactInfo = await getFact("2000", "years");
         const dateFactInfo = await getFact("6/15", "dates");
-        console.log(dateFactInfo)
+
         setData([triviaFactInfo, mathFactInfo, yearFactInfo, dateFactInfo]);
       }
 
