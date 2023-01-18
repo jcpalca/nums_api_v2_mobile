@@ -33,9 +33,6 @@ function ExampleCard({ item, index }) {
         : <Text style={styles.body}>numbersapi.com/{item.month}/{item.day}/{item.type}</Text>
       }
       <Text style={styles.body}>{item.message}</Text>
-      <Pressable style={styles.button}>
-        <Text style={styles.text}>Random Fact</Text>
-      </Pressable>
     </View>
   );
 }
@@ -70,17 +67,6 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingRight: 20
   },
-  button: {
-    marginTop: 50,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: "#000",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    color: "white"
-  }
 });
 
 export default ExampleCard;
