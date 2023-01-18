@@ -17,12 +17,17 @@ function InteractiveTable() {
   console.log('currSearch', currSearch);
 
   useEffect(function fetchFact() {
-    async function fetchFactAPI() {
-      const factInfo = await getFact(fact.number, fact.type);
-      setFact(factInfo);
-    }
+    try {
+      async function fetchFactAPI() {
+        const factInfo = await getFact(fact.number, fact.type);
+        setFact(factInfo);
+      }
 
-    fetchFactAPI();
+      fetchFactAPI();
+    }
+    catch(err) {
+      console.log(err);
+    }
   }, []);
 
   async function searchNum(endpoint) {
@@ -50,7 +55,7 @@ function InteractiveTable() {
 
   return (
     <View>
-      <InteractiveCard />
+      <InteractiveCard fact={fact} searchNum={searchNum}/>
     </View>
   )
 }
