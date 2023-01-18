@@ -2,7 +2,11 @@
 
 import axios from "axios";
 
-const NUMS_API_BASE_URL = "http://localhost:5000/api";
+// iOS
+// const NUMS_API_BASE_URL = "http://localhost:5000/api";
+
+// Android
+const NUMS_API_BASE_URL = "http://10.0.2.2:5000/api";
 
 /**
  *  getFact makes api call to appropriate endpoint and returns normalized data
