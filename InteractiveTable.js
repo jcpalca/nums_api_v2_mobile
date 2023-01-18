@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { View } from "react-native";
 import { getFact } from "./utils";
+import InteractiveCard from "./InteractiveCard";
 
 function InteractiveTable() {
   console.debug('InteractiveTable');
@@ -50,7 +51,8 @@ function InteractiveTable() {
   return (
     <View>
       <InteractiveCard />
-      <RandomCard />
     </View>
   )
 }
+
+export default InteractiveTable;
