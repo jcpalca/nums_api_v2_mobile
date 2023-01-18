@@ -4,6 +4,22 @@ import { View, Text, StyleSheet, Dimensions } from "react-native";
 export const SLIDER_WIDTH = Dimensions.get('window').width + 80;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
+/** ExampleCard: Renders facts of a number based on data coming from ExampleCarousel
+ *
+ *  Props: item: element from data array like:
+ *    {
+ *      "number": "145"
+ *      "message": "145 is the atomic number of Unquadpentium."
+ *      "type": "math"
+ *    }
+ *         index: index of element from data array
+ *
+ *  State: None
+ *
+ *  ExampleCarousel -> ExampleCard
+ *
+ */
+
 function ExampleCard({ item, index }) {
   return (
     <View style={styles.container} key={index}>
