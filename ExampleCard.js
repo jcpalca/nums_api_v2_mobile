@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: ITEM_WIDTH,
     height: 350,
+    paddingTop: 50,
     paddingBottom: 40,
     shadowColor: "#000",
     shadowOffset: {
