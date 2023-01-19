@@ -73,6 +73,18 @@ async function getFact(num, cat) {
     console.log('resp', resp);
   }
 
+  // Unresolved promise check for Android
+  if(!resp) {
+    resp = {
+      data: {
+        error: {
+          message: "Error fetching data",
+          status: err.response.status,
+        }
+      }
+    }
+  }
+
   return normalizeData(resp.data, cat);
 }
 
