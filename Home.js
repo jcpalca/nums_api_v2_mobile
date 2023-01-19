@@ -10,6 +10,8 @@ import { View, Text, Image, StyleSheet } from "react-native";
  */
 
 function Home() {
+  console.debug("Home");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Numbers API!</Text>
