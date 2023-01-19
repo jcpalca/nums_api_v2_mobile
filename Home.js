@@ -1,5 +1,14 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 
+/** Home: Renders homepage
+ *
+ *  Props: None
+ *
+ *  State: None
+ *
+ *  App -> Home
+ */
+
 function Home() {
   return (
     <View style={styles.container}>
