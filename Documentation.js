@@ -1,19 +1,38 @@
-import { View, Text, StyleSheet } from "react-native";
+import { ScrollView, Text, Image, StyleSheet } from "react-native";
 
 function Documentation() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text>Documentation</Text>
-    </View>
+      <Image
+        source={require("./assets/dates-image.png")}
+        style={styles.image}
+      />
+      <Image source={require("./assets/math-image.png")} style={styles.image2} />
+      <Image
+        source={require("./assets/trivia-image.png")}
+        style={styles.image2}
+      />
+      <Image
+        source={require("./assets/years-image.png")}
+        style={styles.image2}
+      />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: "#111",
+  },
+  image: {
+    height: 415,
+    width: 400,
+  },
+  image2: {
+    height: 400,
+    width: 400,
   },
 });
 
