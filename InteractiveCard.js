@@ -67,7 +67,7 @@ function InteractiveCard({ fact, searchNum }) {
         style={styles.input}
         onChangeText={onChangeText}
         placeholder={"trivia/random"}
-        value={text}
+        value={text.toLowerCase()}
       />
       <Text style={styles.result}>{fact.message}</Text>
     </SafeAreaView>
