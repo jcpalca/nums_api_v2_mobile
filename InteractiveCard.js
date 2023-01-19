@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SafeAreaView, StyleSheet, Text, TextInput } from "react-native";
+import { SafeAreaView, StyleSheet, Text, TextInput, TouchableWithoutFeedback } from "react-native";
 
 /** InteractiveCard: Renders a text input and a message generated from
  *                   numbers_api based on the input
@@ -76,8 +76,10 @@ function InteractiveCard({ fact, searchNum }) {
 
 const styles = StyleSheet.create({
   input: {
+    color: "white",
     height: 40,
     margin: 12,
+    borderColor: "white",
     borderWidth: 1,
     width: 150,
     padding: 10,
@@ -87,9 +89,14 @@ const styles = StyleSheet.create({
   },
   result: {
     width: 300,
+    color: "white",
+    borderColor: "white",
     borderWidth: 1,
     borderRadius: 15,
     padding: 30
+  },
+  text: {
+    color: "white"
   }
 });
 
