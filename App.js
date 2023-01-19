@@ -12,13 +12,14 @@ import Documentation from "./Documentation";
 
 const Drawer = createDrawerNavigator();
 
-/** App: Top level component rendering ExampleCarousel
+/** App: Top level component rendering a drawer navigator that leads to other
+ *       components
  *
  *  Props: none
  *
  *  State: none
  *
- *  App -> ExampleCarousel
+ *  App -> { Home, ExampleCarousel, InteractiveTable, Documentation }
  */
 
 export default function App() {
