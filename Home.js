@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 50,
-    backgroundColor: "#fff",
+    backgroundColor: "#333",
     alignItems: "center"
   },
   image: {
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     margin: 50
   },
   title: {
+    color: "white",
     fontSize: 24
   }
 });
