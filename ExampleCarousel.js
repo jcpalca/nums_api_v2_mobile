@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   carousel: {
     paddingTop: 50,
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#999",
     alignItems: "center",
     justifyContent: "center",
   },
