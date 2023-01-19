@@ -36,8 +36,8 @@ GET /api/dates/random
 GET /api/math/:number
 {
   "fact": {
-    "fragment": "the atomic number of Unquadpentium",
-    "statement": "145 is the atomic number of Unquadpentium.",
+    "fragment": "the test case",
+    "statement": "145 is the test case.",
     "number": 145,
     "type": "math"
   }
@@ -46,8 +46,8 @@ GET /api/math/:number
 GET /api/math/random
 {
   "fact": {
-    "fragment": "the atomic number of Unquadpentium",
-    "statement": "145 is the atomic number of Unquadpentium.",
+    "fragment": "the test case",
+    "statement": "145 is the test case.",
     "number": 145,
     "type": "math"
   }
@@ -60,8 +60,8 @@ GET /api/math/random
 GET /api/trivia/:number
 {
   "fact": {
-    "fragment": "the atomic number of Unquadpentium",
-    "statement": "145 is the atomic number of Unquadpentium.",
+    "fragment": "the test case",
+    "statement": "145 is the test case.",
     "number": 145,
     "type": "trivia"
   }
@@ -70,8 +70,8 @@ GET /api/trivia/:number
 GET /api/trivia/random
 {
   "fact": {
-    "fragment": "the atomic number of Unquadpentium",
-    "statement": "145 is the atomic number of Unquadpentium.",
+    "fragment": "the test case",
+    "statement": "145 is the test case.",
     "number": 145,
     "type": "trivia"
   }
@@ -84,19 +84,19 @@ GET /api/trivia/random
 GET /api/years/:number
 {
   "fact": {
-    year=2023,
-    fragment="the year for this y1 test fact_fragment",
-    statement="2023 is the year for this y1 test fact statement.",
-    type="years"
+    "year"= "2023",
+    "fragment"="the test case",
+    "statement"="2023 is the test case.",
+    "type"= "years"
   }
 }
 
 GET /api/years/random
 {
   "fact": {
-    "fragment": "the year Argentina won the World Cup",
-    "statement": "2022 is the year Argentina won the World Cup.",
-    "year": 2022,
+    "fragment"="the test case",
+    "statement"="2023 is the test case.",
+    "year": "2022",
     "type": "years"
   }
 }
