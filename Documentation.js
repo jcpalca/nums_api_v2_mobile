@@ -1,5 +1,14 @@
 import { ScrollView, Text, Image, StyleSheet } from "react-native";
 
+/** Documentation: Renders API documentation for numbers_api
+ *
+ *  Props: none
+ *
+ *  State: none
+ *
+ *  App -> Documentation
+ */
+
 function Documentation() {
   return (
     <ScrollView style={styles.container}>
