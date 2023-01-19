@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
   image2: {
     height: 400,
     width: 400,
+    position: "relative",
+    left: 6,
   },
 });
 
