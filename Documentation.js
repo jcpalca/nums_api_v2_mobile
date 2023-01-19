@@ -10,6 +10,8 @@ import { ScrollView, Text, Image, StyleSheet } from "react-native";
  */
 
 function Documentation() {
+  console.debug("Documentation");
+
   return (
     <ScrollView style={styles.container}>
       <Text>Documentation</Text>
