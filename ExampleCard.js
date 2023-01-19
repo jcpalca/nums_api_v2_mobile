@@ -38,13 +38,13 @@ function ExampleCard({ item, index }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     borderRadius: 8,
     width: ITEM_WIDTH,
     height: 350,
     paddingTop: 50,
     paddingBottom: 40,
-    shadowColor: "#000",
+    shadowColor: "#fff",
     shadowOffset: {
       width: 0,
       height: 3,
@@ -54,14 +54,14 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   header: {
-    color: "#222",
+    color: "white",
     fontSize: 28,
     fontWeight: "bold",
     paddingLeft: 20,
     paddingTop: 20
   },
   body: {
-    color: "#222",
+    color: "white",
     fontSize: 18,
     paddingLeft: 20,
     paddingTop: 20,
