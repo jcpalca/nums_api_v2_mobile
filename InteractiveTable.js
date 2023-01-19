@@ -3,6 +3,38 @@ import { View, StyleSheet } from "react-native";
 import { getFact } from "./utils";
 import InteractiveCard from "./InteractiveCard";
 
+/** InteractiveTable: Renders InteractiveCard and supplies useful functions and
+ *                    state to be passed down as props
+ *
+ *  Props: None
+ *
+ *  State: fact: obj like:
+ *    ERROR:
+      {
+        "message": f"A math fact for { number } not found"
+        "status": 404
+      }
+
+      MATH/TRIVIA/YEAR:
+      {
+        "number": "145"
+        "message": "145 is the atomic number of Unquadpentium."
+        "type": "math"
+      }
+
+      DATE:
+      {
+        "month": "1"
+        "day": "1"
+        "dayOfYear": 1
+        "message": "January 1st is the test case.",
+        "type": "date"
+      }
+ *       currSearch: string
+ *
+ *  App -> InteractiveTable -> InteractiveCard
+ */
+
 function InteractiveTable() {
   console.debug('InteractiveTable');
 
@@ -43,14 +75,6 @@ function InteractiveTable() {
 
     setFact(factInfo);
     setCurrSearch(endpoint);
-  }
-
-  async function searchRand(endpoint) {
-    const [cat, arg1] = endpoint.split("/");
-    console.log("RANDOM SEARCH", cat, arg1);
-    let factInfo = await getFact(arg1, cat);
-    factInfo.number = "random";
-    setFact(factInfo);
   }
 
   return (
