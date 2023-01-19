@@ -1,6 +1,11 @@
 export default [
   {
-    name: 'Carousel',
+    name: 'Home',
+    iconType: 'Entypo',
+    iconName: 'home'
+  },
+  {
+    name: 'Examples',
     iconType: 'MaterialIcons',
     iconName: 'view-carousel'
   },
