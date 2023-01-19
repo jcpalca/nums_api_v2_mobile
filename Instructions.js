@@ -15,7 +15,7 @@ function Instructions() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-        How to use Numbers API:
+        How to use this demo:
       </Text>
       <Text style={styles.listItem}>
         1. The base URL is already supplied.
