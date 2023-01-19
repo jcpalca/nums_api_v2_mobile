@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { getFact } from "./utils";
 import InteractiveCard from "./InteractiveCard";
+import Instructions from "./Instructions";
 
-/** InteractiveTable: Renders InteractiveCard and supplies useful functions and
- *                    state to be passed down as props
+/** InteractiveTable: Renders Instructions and InteractiveCard and supplies
+ *                    useful functions and state to be passed down as props
  *
  *  Props: None
  *
@@ -32,7 +33,7 @@ import InteractiveCard from "./InteractiveCard";
       }
  *       currSearch: string
  *
- *  App -> InteractiveTable -> InteractiveCard
+ *  App -> InteractiveTable -> { Instructions, InteractiveCard }
  */
 
 function InteractiveTable() {
@@ -79,6 +80,7 @@ function InteractiveTable() {
 
   return (
     <View style={styles.container}>
+      <Instructions />
       <InteractiveCard fact={fact} searchNum={searchNum}/>
     </View>
   )
@@ -88,7 +90,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#335c60",
     alignItems: "center",
   },
 });
